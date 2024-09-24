@@ -1,0 +1,65 @@
+# Archivos binarios y compilados de .NET
+**/bin/
+**/obj/
+**/*.dll
+**/*.exe
+**/*.pdb
+**/*.nuget
+**/*.log
+
+# Archivos generados por NuGet
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Archivos de configuración local de usuario
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Archivos de VS, VS para Mac
+.vscode/
+.vscode-test/
+.vscode-server/
+.vscode-server-insiders/
+testResults/
+node_modules/
+.vs/
+.vscode/
+
+# Archivos de configuración de Docker
+docker-compose.override.yml
+.docker/
+docker-compose.debug.yml
+.dockerignore
+Dockerfile
+
+# Sistemas operativos - macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Sistemas operativos - Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Sistemas operativos - Linux
+*~
+.cache/
+# Logs generados por el sistema
+*.log
+
+# Archivos de lock de dependencias
+*.lock
+
+# Otros archivos de dependencias que pueden ser ignorados
+*.js.map
+package-lock.json
+yarn.lock
