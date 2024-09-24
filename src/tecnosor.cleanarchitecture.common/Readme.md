@@ -45,18 +45,21 @@ Tecnosor:CleanArchitecture
 		MinutesInterval: 1..N, // Set interval of the cuota limit (in minutes) - (1 by default)
 		QueueLimit: 1..N, // Set limit of the queue - (50 by default)
 	},
-	Logging: { // TODO - crear
+	Logging: { // TODO - is pending to add external providers like elasticsearch, relational databases, kafka, etc.
 		Enabled: false | true, // Indicates if enable logging module (false by default)
-		Type: "console" | "file", // Indicates type of logs
+		Type: "console" | "file" | "other", // Indicates type of logs (console by default)
 		FileConf: { // If Type is file, configuration related to the file
 			Path: "your/path", // by default will be `{home}/logs/{apname}`
-			Rotation: {
+			Retention: {
 				Enabled: false | true, // Indicates if apply rotation - by default will be false
-				RetentionUnit: "hour" | "daily" | "weekly | "monthly" | "yearly", // Unit of retention - by default monthly
-				RetentionValue: 1..N, // Value of retention - by default 1 (it will mean 1 month, 4 example)
-
+				Unit: "hour" | "daily" | "weekly | "monthly" | "yearly", // Unit of retention - by default monthly
+				Value: 1..N, // Value of retention - by default 1 (it will mean 1 month, 4 example)
 			}
-		}
+		},
+		EnableQr: false | true, // by default true if environment != PRODUCTION
+		EnableAuditRequests: false | true, // by default true
+		EnableDebugTraces: false | true // by default true if environment != PRODUCTION
+		EnableInfoTraces: false | true // by default true
 	},
 	JwtAuth: { // TODO - crear
 		PrivateCrtPath: "path/to/your/path" // Location of private certificate if needed, used for JWT generation,

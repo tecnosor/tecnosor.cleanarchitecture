@@ -3,16 +3,16 @@
 /// <summary>
 /// Marker interface to represent a request with a void response
 /// </summary>
-public interface IRequest<out TResponse> : IBaseRequest { }
+public interface IRequest<out TResponse> : IBaseRequest;
 /// <summary>
 /// Marker interface to represent a request with a void response
 /// </summary>
-public interface IRequest : IBaseRequest { }
+public interface IRequest : IBaseRequest;
 
 /// <summary>
 /// Allows for generic type constraints of objects implementing IRequest or IRequest{TResponse}
 /// </summary>
-public interface IBaseRequest { }
+public interface IBaseRequest;
 
 
 /// <summary>
@@ -48,8 +48,8 @@ public interface IRequestHandler<in TRequest>
     Task Handle(TRequest request, CancellationToken cancellationToken);
 }
 
-public interface IStreamRequest<out TResponse> { }
-public interface INotification { }
+public interface IStreamRequest<out TResponse>;
+public interface INotification;
 
 
 public interface IMediator
