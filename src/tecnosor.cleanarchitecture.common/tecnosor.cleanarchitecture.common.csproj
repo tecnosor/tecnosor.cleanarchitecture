@@ -10,6 +10,7 @@
     <Folder Include="domain\logging\" />
     <Folder Include="domain\authentication\" />
     <Folder Include="domain\openapi\" />
+    <Folder Include="infrastructure\authentication\" />
   </ItemGroup>
 
   <ItemGroup>
